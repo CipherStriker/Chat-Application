@@ -645,9 +645,11 @@ The `setup.js` script in the project root generates cryptographically secure sec
 ### Usage
 
 ```bash
-node setup.js
-cd chat-app-backend
-docker compose up --build -d
+git clone the project
+Navigate to the project root directory
+Execute:
+docker run --rm -v $(pwd):/app -w /app node:18-alpine node setup.cjs
+docker-compose up --build -d
 ```
 
 ### What It Does
